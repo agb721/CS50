@@ -2,10 +2,10 @@
 My code for Harvard's CS50 class.
 
 # Pset_3 (& 4)
-resize: resizes a bmp image file. \n
-recover: recovers "delted" image file information from memory card.
-plurality: simulates a plurality election.
-runoff: simulates a runoff election.
+resize: resizes a bmp image file.  
+recover: recovers "delted" image file information from memory card.  
+plurality: simulates a plurality election.   
+runoff: simulates a runoff election.  
 
 Context & instuctions: https://cs50.harvard.edu/x/2020/psets/3/
 
