@@ -2,10 +2,10 @@
 My code for Harvard's CS50 class.
 
 # Pset_3 (& 4)
-resize: resizes a bmp image file.
+resize: resizes a bmp image file. \n
 recover: recovers "delted" image file information from memory card.
-plurality: simulates a plurality election
-runoff: simulates a runoff election
+plurality: simulates a plurality election.
+runoff: simulates a runoff election.
 
 Context & instuctions: https://cs50.harvard.edu/x/2020/psets/3/
 
@@ -13,5 +13,5 @@ Context & instuctions: https://cs50.harvard.edu/x/2020/psets/3/
 speller: loads dictionary into a hash table for a fast spellchecker
 
 # Pset_6
-Previous Psets, but this time in python instead  of C.
+Previous Psets, but this time in Python instead  of C.
 
