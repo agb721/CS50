@@ -1,4 +1,11 @@
-//Simulates a runoff election with a necessary majority of over 50%
+// Program name: Runoff
+// Simulates a runoff election with a necessary majority of over 50%
+// Instructions and context: https://cs50.harvard.edu/x/2020/psets/3/runoff/
+
+// Quick overview: the program takes in the names of the candidates in the election as command like arguments (e.g. /runoff Alice Bob Charlie)
+// Then, the program prompts the user for the number of people who are voting
+// Then, the program prompts the user to enter each of the voters' preferences (e.g. First voter puts Alic in first place, Bob in second etc.)
+// Finally it runs the election and prints out the winner (or that it's a tie)
 
 #include <cs50.h>
 #include <stdio.h>
@@ -51,6 +58,7 @@ int main(int argc, string argv[])
         printf("Maximum number of candidates is %i\n", MAX_CANDIDATES);
         return 2;
     }
+
     for (int i = 0; i < candidate_count; i++)
     {
         candidates[i].name = argv[i + 1];
@@ -68,7 +76,6 @@ int main(int argc, string argv[])
     // Keep querying for votes
     for (int i = 0; i < voter_count; i++)
     {
-
         // Query for each rank
         for (int j = 0; j < candidate_count; j++)
         {
@@ -81,8 +88,6 @@ int main(int argc, string argv[])
                 return 4;
             }
         }
-
-
         printf("\n");
     }
 
@@ -91,7 +96,6 @@ int main(int argc, string argv[])
     {
         // Calculate votes given remaining candidates
         tabulate();
-
         // Check if election has been won
         bool won = print_winner();
         if (won)
@@ -128,9 +132,8 @@ int main(int argc, string argv[])
     return 0;
 }
 
-
 // Record preference if vote is valid (aka fill in the preferences-array)
-bool vote(int voter, int rank, string name) // how & when is this function called exactly?
+bool vote(int voter, int rank, string name)
 {
     for (int z = 0; z < candidate_count; z++)
     {
@@ -144,7 +147,6 @@ bool vote(int voter, int rank, string name) // how & when is this function calle
     return false;
 }
 
-
 void tabulate(void)
 {
     // go through each voter and use their top non-elimiated vote to update that candidate's vote count
@@ -157,9 +159,7 @@ void tabulate(void)
                 candidates[preferences[i][j]].votes++;
                 break; //previously had "break;" after the next bracket. Check why it didn't work.
             }
-
         }
-
     }
     return;
 }
@@ -174,7 +174,6 @@ bool print_winner(void)
             fprintf(stdout, "%s\n", candidates[i].name);
             return true;
         }
-
     }
     return false;
 }
@@ -194,7 +193,6 @@ int find_min(void)
                 location = c;
             }
         }
-
     }
     return candidates[location].votes;
 }
@@ -213,7 +211,6 @@ bool is_tie(int min)
                 return false;
             }
         }
-
     }
     return true;
 }
@@ -231,6 +228,5 @@ void eliminate(int min)
             }
         }
     }
-
     return;
 }
