@@ -10,8 +10,11 @@ runoff: simulates a runoff election.
 Context & instuctions: https://cs50.harvard.edu/x/2020/psets/3/
 
 # Pset_5
-speller: loads dictionary into a hash table for a fast spellchecker
+speller: loads dictionary into a hash table for a fast spellchecker.
 
 # Pset_6
 Previous Psets, but this time in Python instead  of C.
+
+# Pset_7
+SQL: uses Python and SQL to gain insight from two data sets (IMDB listings and Harry Potter Houses).
 
