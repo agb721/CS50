@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <!-- Table code taken from CS50 implemenation at https://finance.cs50.net/ -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td>${{ balance }}</td>
+            </tr>
+        </tfoot>
+        <tbody>
+                {% for dic in anything %}
+                <tr>
+                    <td>{{ dic["symbol"] }}</td>
+                    <td>{{ dic["name"] }}</td>
+                    <td>{{ dic["shares"] }}</td>
+                    <td>{{ dic["price"] }}</td>
+                    <td>{{ dic["total_value"] }}</td>
+                </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
