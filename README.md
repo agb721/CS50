@@ -1,5 +1,5 @@
 # CS50
-My code for Harvard's CS50 class.
+My code for Harvard's CS50 class (completed).
 
 # Pset_3 (& 4)
 resize: resizes a bmp image file.  
